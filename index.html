@@ -10,13 +10,14 @@
     <script src="https://kit.fontawesome.com/c1b6c8221c.js" crossorigin="anonymous"></script>
     <script src="https://smtpjs.com/v3/smtp.js">
     </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="index.html">
-                <img src="./media/logocu.png" alt="Avatar Logo" style="width:40px;" class="rounded-pill">
+                <img src="./media/logocu.png" alt="Avatar Logo" width="40px" class="rounded-pill">
                 <!--agregar width a la imagen para que se modifique el tamaño responsive-->
             </a>
     
@@ -34,11 +35,11 @@
                             Todos los productos
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">2x2</a></li>
-                            <li><a class="dropdown-item" href="#">3x3</a></li>
-                            <li><a class="dropdown-item" href="#">Pirámides</a></li>
-                            <li><a class="dropdown-item" href="#">Cuboides</a></li>
-                            <li><a class="dropdown-item" href="#">Otros puzzles</a></li>
+                            <li><a class="dropdown-item" href="html/catalog.html">2x2</a></li>
+                            <li><a class="dropdown-item" href="html/catalog.html">3x3</a></li>
+                            <li><a class="dropdown-item" href="html/catalog.html">Pirámides</a></li>
+                            <li><a class="dropdown-item" href="html/catalog.html">Cuboides</a></li>
+                            <li><a class="dropdown-item" href="html/catalog.html">Otros puzzles</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -67,8 +68,8 @@
     </nav>
     
     <br>
-    <div class="container text-center py-3">
-        <img class="logo" src="./media/Cubulis.png" alt="Cubulis Logo">
+    <div class="container mt-4 text-center animate__animated animate__fadeInDown">
+        <img src="./media/Cubulis.png" class="img-fluid" alt="Descripción de la imagen">
     </div>
     <!-- Modal Sobre Nosotros -->
     <div class="modal fade" id="sobreNosotrosModal" tabindex="-1" aria-labelledby="sobreNosotrosLabel" aria-hidden="true">
@@ -87,16 +88,15 @@
             </div>
         </div>
     </div>
-    <hr>
             <!--barra de busqueda-->
-            <div class="container py-3">
+            <div class="container py-3 animate__animated animate__fadeInDown" >
               <div class="search-container d-flex justify-content-center">
                   <input type="text" class="search-input form-control w-100" placeholder="Buscar...">
-                  <button class="search-button btn btn-danger ml-2">🔍</button>
+                  <span><button class="search-button btn btn-danger ml-2">🔍</button></span>
               </div>
           </div>
           <h2 class="text-center">Artículos en tendencia</h2>
-          <div class="product-grid">
+          <div class="product-grid animate__animated animate__fadeIn">
             <a href="https://example.com/product1" class="product-card">
                 <img src="./media/gan356rs.jpg" alt="Product 1" class="product-image">
                 <div class="product-info">
