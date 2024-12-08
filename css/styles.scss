@@ -84,7 +84,7 @@ body {
 
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 20px;
   padding: 2rem;
 
@@ -182,24 +182,15 @@ input[type="range"] {
   }
 }
 
-@media (max-width: 576px) {
-  .search-container {
-    flex-direction: column;
-
-    .search-input,
-    .search-button {
-      width: 100%;
-      padding: 12px;
-    }
-  }
-
+@media (max-width: 1278px) {
   .product-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(4, 1fr);
   }
+}
 
-  .product-grid .no-image {
-    font-size: 16px;
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -222,14 +213,29 @@ input[type="range"] {
   }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 576px) {
+  .search-container {
+    flex-direction: row; /* Mantén la dirección de los elementos en una fila */
+    justify-content: space-between; /* Asegura que el campo de búsqueda y el botón estén separados */
+  }
+
+  .search-input {
+    width: calc(100% - 50px); /* Resta el tamaño del botón del 100% */
+  }
+
+  .search-button {
+    width: 50px; /* Establece un tamaño fijo para el botón */
+    padding: 12px; /* Ajusta el padding si es necesario */
+  }
+
   .product-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+
+  .product-grid .no-image {
+    font-size: 16px;
   }
 }
 
-@media (min-width: 1200px) {
-  .product-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-}
+
